@@ -8,7 +8,7 @@ from setup.printr import Printr
 
 class Point:
 
-    def __init__(self, win, arr_coord, pixel_coord):
+    def __init__(self, win, arr_coord, pixel_coord, centroid):
         pygame.init()
         self.win = win
         self.printr = Printr(self.win)
@@ -17,7 +17,7 @@ class Point:
         self.arr = arr_coord
         self.pixel = pixel_coord
 
-        self.centroid = False
+        self.centroid = centroid
         self.cluster = None
 
         self.c = self.set.ultra_light_grey
@@ -25,23 +25,10 @@ class Point:
         self.centroid_r = 8
 
 
-
-    def set_centroid(self):
-        self.centroid = True
-
-    def cancel_centroid(self):
-        self.centroid = False
-
-    def get_centroid(self):
-        if self.centroid:
-            return True
-        return False
-
-
     def set_cluster(self, cluster):
         self.cluster = cluster
         self.c = self.set.class_colours[cluster]
-
+        
 
     def get_cluster(self):
         return self.cluster

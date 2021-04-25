@@ -23,7 +23,6 @@ class Plot:
         self.draw_axes()
         self.draw_x_axis_labels()
         self.draw_y_axis_labels()
-        #self.draw_origin()
 
 
     """ DRAW PLOT """
@@ -82,8 +81,6 @@ class Plot:
 
                 self.printr.axis_label_printr(arr_label, x_offset, y_offset, self.c1)
                 self.printr.axis_label_printr(pixel_label, x_offset, y_offset + 12, self.set.blue)
-
-
 
 
     """ UTILITY """

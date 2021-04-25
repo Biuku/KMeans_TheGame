@@ -14,7 +14,7 @@ class Arr:
         self.origin_gap_left = 0.07 + self.set.border_gap## lower = left
         self.origin_gap_bottom = 0.12 + self.set.border_gap ## lower = up
 
-        self.arr = np.load('data/basic_blobs_60.npy')
+        self.arr = np.load('data/blobs150_54_2-2.npy')
         self.axis_labels = 15
 
         self.update_pixel_anchors(1600, 900)
